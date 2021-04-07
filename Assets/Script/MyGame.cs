@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class MyGame : MonoBehaviour
 {
     public int score = 0;
+    public Text scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,6 @@ public class MyGame : MonoBehaviour
 
     public void AddScore(int s) {
         this.score += s;
-        Debug.Log("当前得分：" + score);
+        scoreText.text = "" + score;
     }
 }
